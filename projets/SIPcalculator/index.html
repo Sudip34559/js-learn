@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SIP calculator</h1>
+    <form>
+        <div>
+            <p>Monthly investmant: </p>
+             <input type="text" id="money">
+        </div>
+        <div>
+            <p>Expected return rete(%): </p>
+             <input type="text" id="rate">
+        </div>
+        <div>
+            <p>Time period(Yr): </p>
+             <input type="text" id="time">
+        </div>
+        <div class="calculate">
+            <button>Calculate</button>
+        </div>
+    </form>
+    <div id="returnbox">
+      <div id="box">
+        <div>
+            <p>Total invested amount: <span id="invest" style="color: green;" ></span></p>
+          </div>
+          <div>
+            <p>Est. return: <span id="totalreturn" style="color: green;"></span></p>
+          </div>
+          <div>
+            <p>Total value: <span id="total" style="color: green;"></span></p>
+          </div>
+      </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+</html>

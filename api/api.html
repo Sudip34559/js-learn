@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: rgb(6, 255, 106); ">
+    
+</body>
+
+<script>
+
+let div = document.createElement("div");
+document.querySelector("body").appendChild(div);
+div.style.width = "350px";
+div.style.height = "200px";
+div.style.backgroundImage = "linear-gradient(to bottom right, rgb(0, 200, 130),rgb(83, 233, 218 )";
+div.style.borderRadius = "10px"
+div.style.overflow = "hidden"
+div.style.padding = "10px"
+div.className = "card"
+
+let profile = document.createElement("div")
+document.querySelector(".card").appendChild(profile)
+profile.style.width = "100%";
+profile.style.height = "50%";
+profile.style.display = "flex";
+profile.style.gap = "10px";
+profile.className = "profile"
+
+let image = document.createElement("img")
+document.querySelector(".profile").appendChild(image)
+image.style.height = "100px"
+image.style.width = "100px"
+image.style.borderRadius = "10px"
+
+let userName = document.createElement("h2")
+document.querySelector(".profile").appendChild(userName)
+userName.style.color = "rgb(6, 255, 106)"
+userName.fontSize = "18px"
+
+
+
+
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', requestUrl)
+ xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        const data = JSON.parse(this.response)
+        profile = data.avatar_url
+        image.src = profile
+        name = data.name
+        userName.innerText = name
+    }
+  }
+  xhr.send()
+</script>
+
+</html>

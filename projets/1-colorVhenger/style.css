@@ -1,0 +1,62 @@
+html {
+    margin: 0;
+  }
+  
+  
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+  
+  #grey {
+    background: grey;
+  }
+  
+  #white {
+    background: white;
+  }
+  #blue {
+    background: blue;
+  }
+  #yellow {
+    background: yellow;
+  }
+  .clickdiv{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clickbutton{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    background: greenyellow;
+  }
+  .clickout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    justify-content: center;
+    align-items: center;
+  }
+  #cross{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+  }
+  

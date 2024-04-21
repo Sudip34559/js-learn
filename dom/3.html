@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body   style="background-color: black; color: white;">
+    <div class="namelist">
+        <ul class="name">
+     
+        </ul>
+        <ul class="name2">
+    
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector('.namelist').style.display = 'flex'
+
+    const nameArr = ["sudip", "rahul", "sayandip", "sani"]
+
+    function differentName(personName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${personName}`
+        document.querySelector('.name').appendChild(li)
+    }
+    for (let i = 0; i < nameArr.length; i++) {
+        const element = nameArr[i];
+        differentName(element)
+    }
+
+//    more usefull way 
+
+    const nameArr2 = [, "bithi", "ankita", "poulami", "meghna"]
+
+    function differentName2(personName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(personName))
+        document.querySelector('.name2').appendChild(li)
+    }
+    nameArr2.forEach((name) => {
+       return differentName2(name)
+    })
+
+// edit
+
+const nameList = document.querySelector(".namelist")
+const thirdName2 = nameList.children[1].children[2] 
+const thirdName = nameList.children[0].children[2]
+
+// thirdName.innerHTML = "snehasish"
+// thirdName2.innerHTML = "pinki"
+
+const newli = document.createElement("li")
+newli.textContent = "snehasish"
+thirdName.replaceWith(newli)
+
+const newli2 = document.createElement("li")
+newli2.textContent = "pinki"
+thirdName2.replaceWith(newli2)
+
+// thirdName.outerHTML = "<li>snehasish</li>"
+// thirdName2.outerHTML = "<li>pinki</li>"
+
+// remove 
+
+// const nameList2 = document.querySelector("ul:last-child").children[1]
+// nameList2.remove()
+
+</script>
+</html>
